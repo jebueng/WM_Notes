@@ -41,6 +41,12 @@ class BackfillAddSalesforceColumnsToBrands < ActiveRecord::Migration[6.1]
 end
 ```
 
+### strong migrations 
+we use this for the cor database
+https://github.com/ankane/strong_migrations
+
+
+
 ## Similar Migrations 
 ```ruby
 class AddEcpmColumnsToRegionAdvertisingSettings < ActiveRecord::Migration[6.0]
