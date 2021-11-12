@@ -1,4 +1,4 @@
-Pulling another branch 
+Pulling another branch into a new branch
 ```sh
 git checkout -b COR-9219 origin/COR-9219 
 ```
