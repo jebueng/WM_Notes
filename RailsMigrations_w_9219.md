@@ -45,6 +45,8 @@ end
 we use this for the cor database
 https://github.com/ankane/strong_migrations
 
+Extra reading:
+https://www.braintreepayments.com/blog/safe-operations-for-high-volume-postgresql/
 
 
 ## Similar Migrations 
