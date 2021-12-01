@@ -15,3 +15,22 @@ Notes collected while developing on the platform
  `change_column_default` apparently works after the fact? 
  
  `change_column_null` also disables columns from being initialized null?
+
+### Connecting to cloud environments
+
+```shell
+#this opens up teleport
+wmtsh weedmaps acceptance
+
+# this will get a list 
+kubectl config get-contexts
+
+# using AUTHINFO, pick the right id then
+kubectl config use-context teleport.internal-weedmaps.com-eks-weedmaps-acceptance
+
+# this will list pods
+kubectl -n core get pods
+
+# choose the one with UTILITY
+kubectl -n core exec -ti core-utility-798cfccbb4-jjqtx -- /vault/vault-env bundle exec rails c
+
