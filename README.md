@@ -34,3 +34,6 @@ kubectl -n core get pods
 # choose the one with UTILITY
 kubectl -n core exec -ti core-utility-798cfccbb4-jjqtx -- /vault/vault-env bundle exec rails c
 
+## VPN Stability issues
+It's normal behavior for VPN to be inconsistent thus far. Keep retrying before esculating. 
+
