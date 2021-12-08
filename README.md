@@ -15,6 +15,9 @@ Notes collected while developing on the platform
  `change_column_default` apparently works after the fact? 
  
  `change_column_null` also disables columns from being initialized null?
+ 
+#### Seeding Databases
+When in doubt, `make clean` and then leverage `rake dev:prime` to set up the databases. 
 
 ### Connecting to cloud environments
 
