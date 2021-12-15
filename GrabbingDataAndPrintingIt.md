@@ -1,6 +1,7 @@
+```ruby
 orgIds = Listing.where(wmid: listing_ids).where('package_level > ?', 0).where.not(organization: nil).group(:organization_id).pluck(:organization_id)
 
-```ruby
+
 orgIds_map = orgIds.map do |id|
     {
         "name": "orgId",
@@ -9,7 +10,6 @@ orgIds_map = orgIds.map do |id|
         "type": "custom_attribute"
     }
 end
-```
 
 f = File.new(Rails.root + 'org_ids_with_package.json', 'w')
   f << JSON.pretty_generate(orgIds_map.as_json)
@@ -17,7 +17,6 @@ f.close
 
 usernames_w_package = Listing.where(wmid: listing_ids).where('package_level > ?', 0).where(organization: nil).joins(:user).pluck(:username)
 
-```ruby
 usernames_w_package_map = listing_users_uniq.map do |user|
     {
         "name": "username",
@@ -26,7 +25,6 @@ usernames_w_package_map = listing_users_uniq.map do |user|
         "type": "custom_attribute"
     }
 end
-```
 
 f = File.new(Rails.root + 'listing_users_optimizely_uniq.json', 'w')
   f << JSON.pretty_generate(listing_users_uniq_map.as_json)
@@ -44,6 +42,7 @@ f.close
   f = File.new(Rails.root + 'usernames.json', 'w')
   f << JSON.pretty_generate(usernames.as_json)  
   f.close
+```
   
   ### Doing it with PSQL
   ```sql
