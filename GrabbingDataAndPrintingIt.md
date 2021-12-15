@@ -76,3 +76,5 @@ f.close
   -- clean up table
   DROP TABLE csv;
   ```
+  
+  ### Other ActiveRecord Queries
