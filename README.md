@@ -38,6 +38,20 @@ kubectl -n core get pods
 kubectl -n core exec -ti core-utility-798cfccbb4-jjqtx -- /vault/vault-env bundle exec rails c
 ```
 
+#### Requesting on PROD
+```sh
+wmtsh weedmaps production prod-edit 
+```
+You will need to get approved. after approval, need to grab the `request-id` from the response. 
+
+Then log in with 
+```sh
+tsh login --request-id=e615c7df-66f3-4483-be61-5da8b6480c28
+```
+
+From there you can proceed normally as above. 
+
+
 #### VPN Stability issues
 It's normal behavior for VPN to be inconsistent thus far. Keep retrying before esculating. 
 
