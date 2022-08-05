@@ -3,3 +3,5 @@ dealing with deals_setup_spec.
 Evan setup the caching of dispensary ids and values. 
 
 Should there be a deals_setup_helper for managing redis connection? 
+
+`rubocop -A $(git diff --name-only)` rubocops only changed files
